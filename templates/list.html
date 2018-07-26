@@ -1,0 +1,27 @@
+{% include "index.html" %}
+<html>
+   <body>
+   <div class="container">
+      <table class="table table-hover">
+         <tr class="thead-dark font-weight-bold">
+            <td>User ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Current Credit</td>
+         </tr>
+         
+         {% for row in rows %}
+            <tr>
+		
+               <td>{{row["uid"]}}</td>
+               <td>{{row["name"]}}</td>
+               <td>{{row["email"]}}</td>
+               <td>{{row['credit']}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+     </div>
+     <a href = "/">Go back to home page</a>
+      
+   </body>
+</html>
